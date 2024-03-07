@@ -20,6 +20,7 @@ public class BookController {
     public void addBok(@RequestBody Book book){
         service.addBook(book);
     }
+
     @GetMapping("/get")
     public Iterable<BookEntity> getBooks(){return service.getBooks();}
     @DeleteMapping("/{id}")
