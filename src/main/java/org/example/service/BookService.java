@@ -11,4 +11,5 @@ public interface BookService {
     List<BookEntity> getBooks();
     boolean deleteBook(Long id);
     Book getBookById(Long id);
+    void addList(List<Book> bookList);
 }

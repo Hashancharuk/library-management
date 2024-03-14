@@ -1,5 +1,8 @@
 package org.example.dto;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,7 +12,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 public class Book {
-    private Long id; 
+    @Valid
+
+    private Long id;
+    @NotNull(message = "ISBN is Required")
+    @NotBlank(message = "ISBN is Required")
     private String isbn;
     private String title;
     private String author;
